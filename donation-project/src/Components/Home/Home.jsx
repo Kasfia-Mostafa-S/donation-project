@@ -1,7 +1,11 @@
+import DonationCard from "../DonationCard/DonationCard";
+import Search from "../Search/Search";
+
 const Home = () => {
   return (
     <div>
-      <h2>Home</h2>
+      <Search></Search>
+      <DonationCard></DonationCard>
     </div>
   );
 };

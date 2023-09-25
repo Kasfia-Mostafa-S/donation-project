@@ -3,7 +3,7 @@ import LogoImage from "../LogoImage/LogoImage";
 
 const Navbar = () => {
   return (
-    <div className="mt-5">
+    <div className="pt-5">
       <nav className="grid grid-cols-2 gap-20">
         <LogoImage></LogoImage>
         <ul className="grid grid-cols-3 w-5/6 p-5 text-xl text-center">
