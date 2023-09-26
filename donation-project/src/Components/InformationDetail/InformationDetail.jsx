@@ -1,33 +1,29 @@
+import swal from "sweetalert";
 
 const InformationDetail = ({ donationCard }) => {
-  const { image, description, price, text_title, title,id } = donationCard || {};
+  const { image, description, price, text_title, title, id } =
+    donationCard || {};
 
   const handleDonation = () => {
-
-const addToDonation = [];
+    const addToDonation = [];
 
     const donationItem = JSON.parse(localStorage.getItem("donation"));
 
-    if(!donationItem){
-      addToDonation.push(donationCard)
-      localStorage.setItem('donation',JSON.stringify(addToDonation))
-      alert('selected')
-    }
-    else{
-
-const isExist = donationItem.find(donationCard => donationCard.id === id)
-console.log(isExist)
-if(isExist){
-  addToDonation.push(...donationItem,donationCard);
-  localStorage.setItem('donation',JSON.stringify(addToDonation))
-  alert('selected')
-}
-else{
-  
-}
-
-     
-
+    if (!donationItem) {
+      addToDonation.push(donationCard);
+      localStorage.setItem("donation", JSON.stringify(addToDonation));
+      swal("Good job!", "Thank you for the donation!", "success");
+    } else {
+      const isExist = donationItem.find(
+        (donationCard) => donationCard.id === id
+      );
+      if (!isExist) {
+        addToDonation.push(...donationItem, donationCard);
+        localStorage.setItem("donation", JSON.stringify(addToDonation));
+        swal("Good job!", "Thank you for donation!", "success");
+      } else {
+        swal("Error!", "Product Already Added!", "error");
+      }
     }
   };
 
