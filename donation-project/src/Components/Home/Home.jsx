@@ -1,11 +1,15 @@
-import DonationCard from "../DonationCard/DonationCard";
+import { useLoaderData } from "react-router-dom";
 import Search from "../Search/Search";
+import DonationCards from "../DonationCards/DonationCards";
 
 const Home = () => {
+
+  const donationCards = useLoaderData();
+
   return (
     <div>
       <Search></Search>
-      <DonationCard></DonationCard>
+      <DonationCards donationCards={donationCards}></DonationCards>
     </div>
   );
 };
