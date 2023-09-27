@@ -4,9 +4,12 @@ import LogoImage from "../LogoImage/LogoImage";
 const Navbar = () => {
   return (
     <div className="pt-5">
-      <nav className="grid grid-cols-2 gap-20">
+      <nav className="grid grid-rows-2 lg:grid-cols-2 ">
+        <div>
         <LogoImage></LogoImage>
-        <ul className="grid grid-cols-3 w-5/6 p-5 text-xl text-center">
+        </div>
+        <div>
+        <ul className="grid grid-cols-1 lg:grid-cols-3 w-5/6 p-5 text-xl text-center">
           {/* Home button */}
           <li>
             <NavLink
@@ -44,6 +47,7 @@ const Navbar = () => {
             
           </li>
         </ul>
+        </div>
       </nav>
     </div>
   );
