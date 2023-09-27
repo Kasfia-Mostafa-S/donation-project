@@ -16,7 +16,6 @@ const Donation = () => {
     }
   }, []);
 
-  console.log(isSeeAll);
   return (
     <div className="p-5">
       {noData ? (

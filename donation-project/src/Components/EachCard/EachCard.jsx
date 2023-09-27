@@ -11,7 +11,7 @@ const EachCard = ({ donationCard }) => {
         style={{ background: category_bg }}
       >
         <figure>
-          <img className="w-full h-52" src={image} alt="Shoes" />
+          <img className="w-full h-52" src={image} />
         </figure>
         <div className="card-body">
           <div className="card-actions justify-start">
