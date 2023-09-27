@@ -23,7 +23,8 @@ const Donation = () => {
         </p>
       ) : (
         <div>
-          <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 
+          lg:grid-cols-2 gap-5 bg-white h-full w-fit p-5 mt-10 mb-10">
             {donation.map((donate) => (
               <Donate key={donate.id} donate={donate}></Donate>
             ))}
