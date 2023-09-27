@@ -5,9 +5,8 @@ const Donate = ({ donate }) => {
     donate || {};
 
   return (
-    <div >
-      
-     <div className="card card-side" style={{ background: category_bg }}>
+    <div>
+      <div className="card card-side" style={{ background: category_bg }}>
         <figure>
           <img className="w-60 h-60" src={image} alt="Movie" />
         </figure>
@@ -23,19 +22,18 @@ const Donate = ({ donate }) => {
             ${price.toFixed(2)}
           </p>
           <div className="card-actions justify-start">
-            {/* <Link to='/'> */}
-            <button
-            onClick={handleDonation}
-              className="btn h-10 border-none text-white"
-              style={{ background: text_title }}
-            >
-              View Details
-            </button>
-            {/* </Link> */}
+            <Link to="/informationDetail">
+              <button
+                className="btn h-10 border-none text-white"
+                style={{ background: text_title }}
+              >
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-     </div>
+    </div>
   );
 };
 
